@@ -10,5 +10,6 @@ export default Text;
 const styles = StyleSheet.create({
   text: {
     color: "white",
+    fontFamily: "Montserrat_500Medium",
   },
 });

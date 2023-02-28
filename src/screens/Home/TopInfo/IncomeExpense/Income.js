@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
     marginTop: 6,
     fontWeight: "bold",
     fontSize: 18,
+    fontFamily: "Montserrat_600SemiBold",
   },
 });
