@@ -9,9 +9,7 @@ const Providers = ({ children }) => {
   return (
     <AppProvider>
       <DesktopProvider>
-        <FontProvider>
-          <SafeAreaProvider>{children}</SafeAreaProvider>
-        </FontProvider>
+        <FontProvider>{children}</FontProvider>
       </DesktopProvider>
     </AppProvider>
   );

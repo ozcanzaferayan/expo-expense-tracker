@@ -13,7 +13,6 @@ const ExpenseList = () => {
     <>
       <FlatList
         style={{ ...styles.list }}
-        contentInset={{}}
         contentContainerStyle={{ backgroundColor: "white", paddingBottom: 24 }}
         data={app?.expenses}
         bounces={true}

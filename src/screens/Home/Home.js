@@ -6,7 +6,6 @@ import ExpenseList from "./ExpenseList/ExpenseList";
 import BottomTab from "../../components/molecules/BottomTab";
 
 const Home = () => {
-  const insets = useSafeAreaInsets();
   return (
     <View style={{ ...styles.container }}>
       <ExpenseList />
