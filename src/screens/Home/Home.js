@@ -8,12 +8,7 @@ import BottomTab from "../../components/molecules/BottomTab";
 const Home = () => {
   const insets = useSafeAreaInsets();
   return (
-    <View style={{ ...styles.container, paddingTop: insets.top }}>
-      <LinearGradient
-        colors={["#5434b9", "#8f4fd6"]}
-        style={styles.background}
-      />
-      <TopInfo />
+    <View style={{ ...styles.container }}>
       <ExpenseList />
       <BottomTab />
     </View>
@@ -22,12 +17,5 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  background: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 328,
-  },
 });
 export default Home;

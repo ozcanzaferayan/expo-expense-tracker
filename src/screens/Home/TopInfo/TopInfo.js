@@ -2,10 +2,12 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import Text from "../../../components/atoms/Text";
 import IncomeExpenseContainer from "./IncomeExpense/IncomeExpenseContainer";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const TopInfo = () => {
+  const insets = useSafeAreaInsets();
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, paddingTop: insets.top }}>
       <Text>CURRENT BALANCE</Text>
       <Text style={styles.balance}>
         <Text style={styles.balanceSign}>$</Text>
@@ -21,8 +23,8 @@ export default TopInfo;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 6,
     alignItems: "center",
+    paddingBottom: 26,
   },
   balance: {
     marginTop: 16,
