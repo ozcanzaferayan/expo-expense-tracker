@@ -5,6 +5,7 @@ import ExpenseListItem from "./ExpenseListItem";
 import { LinearGradient } from "expo-linear-gradient";
 import TopInfo from "../TopInfo/TopInfo";
 import ExpenseListBackgroundColor from "./ExpenseListBackgroundColor";
+import ExpenseListHeader from "./ExpenseListHeader";
 
 const ExpenseList = () => {
   const app = useContext(AppContext);
@@ -17,15 +18,7 @@ const ExpenseList = () => {
         data={app?.expenses}
         bounces={true}
         keyExtractor={(item) => item.id}
-        ListHeaderComponent={() => (
-          <>
-            <LinearGradient
-              colors={["#5434b9", "#8f4fd6"]}
-              style={styles.background}
-            />
-            <TopInfo />
-          </>
-        )}
+        ListHeaderComponent={() => <ExpenseListHeader />}
         ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
         renderItem={({ item }) => {
           return <ExpenseListItem data={item} />;
@@ -42,12 +35,5 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     marginBottom: 100,
-  },
-  background: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 328,
   },
 });
