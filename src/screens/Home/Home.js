@@ -1,7 +1,5 @@
-import { View, SafeAreaView, StyleSheet } from "react-native";
-import React from "react";
+import { View, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import Text from "../../components/atoms/Text";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import TopInfo from "./TopInfo/TopInfo";
 import ExpenseList from "./ExpenseList/ExpenseList";
@@ -10,24 +8,20 @@ import BottomTab from "../../components/molecules/BottomTab";
 const Home = () => {
   const insets = useSafeAreaInsets();
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, paddingTop: insets.top }}>
       <LinearGradient
         colors={["#5434b9", "#8f4fd6"]}
         style={styles.background}
       />
-      <View style={{ paddingTop: insets.top }}>
-        <TopInfo />
-        <ExpenseList />
-      </View>
+      <TopInfo />
+      <ExpenseList />
       <BottomTab />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: { flex: 1 },
   background: {
     position: "absolute",
     left: 0,

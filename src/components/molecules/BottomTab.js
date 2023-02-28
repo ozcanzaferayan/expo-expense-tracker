@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: "#0000000a",
     paddingVertical: 12,
-    paddingHorizontal: 20,
+    paddingHorizontal: 28,
     flexDirection: "row",
     justifyContent: "space-between",
   },

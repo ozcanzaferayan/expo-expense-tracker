@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: "100%",
     height: "100%",
-    opacity: 0.0,
+    opacity: 0.1,
+    zIndex: -1,
   },
 });

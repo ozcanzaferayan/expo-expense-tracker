@@ -7,7 +7,7 @@ const Router = () => {
   return (
     <>
       <Home />
-      <Reference />
+      {/* <Reference /> */}
     </>
   );
 };

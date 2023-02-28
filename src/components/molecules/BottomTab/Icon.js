@@ -16,7 +16,15 @@ const Icon = ({ name = "home", title = "Home", active = false }) => {
       ) : (
         <>
           <Feather name={name} size={26} color={color} />
-          <Text style={{ color: color }}>{title}</Text>
+          <Text
+            style={{
+              ...styles.text,
+              color: color,
+              fontSize: 10,
+            }}
+          >
+            {title}
+          </Text>
         </>
       )}
     </View>
@@ -27,6 +35,7 @@ export default Icon;
 
 const styles = StyleSheet.create({
   container: {
+    width: 50,
     alignItems: "center",
     gap: 4,
   },
@@ -35,4 +44,5 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderRadius: 10,
   },
+  text: {},
 });

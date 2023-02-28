@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const AppContext = createContext(null);
 export const AppSetterContext = createContext(null);
@@ -44,6 +44,39 @@ const AppProvider = ({ children }) => {
         category: "Housing",
         title: "Home Rent",
         price: "523",
+        isIncome: false,
+        date: "2023-05-19T12:00:00",
+      },
+
+      {
+        id: 6,
+        category: "Travel",
+        title: "Fly to Paris",
+        price: "523",
+        isIncome: false,
+        date: "2023-05-19T12:00:00",
+      },
+      {
+        id: 7,
+        category: "Market",
+        title: "Groceries",
+        price: "179",
+        isIncome: false,
+        date: "2023-05-19T12:00:00",
+      },
+      {
+        id: 8,
+        category: "Salary",
+        title: "Salary + Bonus",
+        price: "1265",
+        isIncome: true,
+        date: "2023-05-19T12:00:00",
+      },
+      {
+        id: 9,
+        category: "Clothing",
+        title: "Clothes",
+        price: "179",
         isIncome: false,
         date: "2023-05-19T12:00:00",
       },
